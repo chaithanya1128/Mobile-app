@@ -1,3 +1,22 @@
+The error indicates that there is a missing `[buildozer]` section in your `buildozer.spec` file. This section is essential for the buildozer configuration. Here is an updated version of your `buildozer.spec` file that includes the `[buildozer]` section with the necessary configuration options.
+
+```ini
+[buildozer]
+# (str) Buildozer log level (default is 2)
+log_level = 2
+
+# (int) Number of attempts to retry fetching data (default is 3)
+fetch_retries = 3
+
+# (int) Timeout in seconds for fetching data (default is 30)
+fetch_timeout = 30
+
+# (str) Android package source, default is 'android'
+package.source = android
+
+# (bool) Enable warning when running as root (default is 1)
+warn_on_root = 1
+
 [app]
 
 # (str) Title of your application
@@ -204,6 +223,4 @@ android.private_storage = True
 #android.gradle_dependencies =
 
 # (bool) Enable AndroidX support. Enable when 'android.gradle_dependencies'
-# contains an 'androidx' package, or any package from Kotlin source.
-# android.enable_androidx requires android.api >= 28
-#android.enable_android
+# contains an 'androidx' package, or any package from
